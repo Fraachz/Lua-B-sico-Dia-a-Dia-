@@ -117,3 +117,5 @@ end
 
 -- 5) Resposta:
 
+text = io.read()
+print(text)
