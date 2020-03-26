@@ -99,7 +99,7 @@ end
 idade_02 = 16
 idade_01 = 15
 
-if idade_01 ~= number then
+if idade_01 == type(number) then
     idade_01 = tostring(idade_01)
     print("A variavel do tipo NUMBER, passou a ser do tipo STRING.")
     print("Valor: "..type(idade_01)..", String: "..idade_01)
