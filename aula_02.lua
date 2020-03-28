@@ -18,6 +18,8 @@ essa superior a 10.
 
 -- 1) Resposta:
 
+-- EU FIZ BASEADO NO PDF ;-; Se eu errei, pelo menos tentei :c
+
 media = 5
 nota_01 = 4
 nota_02 = 9
