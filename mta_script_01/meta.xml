@@ -1,0 +1,5 @@
+<meta>
+    <info author="Fraachz" name="Script feito como tarefa do curso de lua básico." version="1.0.0" type="script" />
+    
+    <script src="sFraachz.lua" type="server" />
+</meta>
