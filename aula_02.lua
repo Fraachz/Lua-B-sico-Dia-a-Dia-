@@ -18,23 +18,35 @@ essa superior a 10.
 
 -- 1) Resposta:
 
--- EU FIZ BASEADO NO PDF ;-; Se eu errei, pelo menos tentei :c
+cursos = {[1] = {},[2] = {},}
+alunos = {[1] =  0, [2] = 0,}
 
-media = 5
-nota_01 = 4
-nota_02 = 9
+function obter_notas(aluno)
+    for a=1, #alunos do 
+        for c=1, #cursos do 
+            print("Digite a Nota do Aluno 0"..a.. " referente ao curso 0"..c)
+            local notas = io.read()
+            if #notas <= 2 then 
+                alunos[a] = alunos[a] + notas
+                table.insert(cursos[c], notas)
+            end 
+        end 
+    end 
+    calcular_medias()
+end 
 
-if nota_01 >= 5 then
-    print("Você foi aprovado no curso de Programação de Lua Básico, meus parabéns! (Seus acertos: "..nota_01..")")
-else 
-    print("Você foi reprovado no curso de Programação de Lua Básico! Tente novamente em outra turma. (Nossa média: "..media..")")
-end
+function calcular_medias()
+    for i, notas in ipairs(alunos) do 
+        local media = (alunos[i] / #cursos[i])
+        if media >= 5 then 
+            print("Aluno 0"..i.." Aprovado!")
+        else 
+            print("Aluno 0"..i.." Reprovado!")
+        end 
+    end 
+end 
 
-if nota_02 >= 5 then
-    print("Você foi aprovado no curso de Programação de Lua Básico, meus parabéns! (Seus acertos: "..nota_02..")")
-else 
-    print("Você foi reprovado no curso de Programação de Lua Básico! Tente novamente em outra turma. (Nossa média: "..media..")")
-end
+obter_notas()
 
 --[[
 ========================================================
